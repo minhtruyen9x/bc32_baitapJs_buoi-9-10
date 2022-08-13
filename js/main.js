@@ -182,6 +182,13 @@ function updateStaff() {
         return
     }
 
+    // Kiểm tra account input phải trùng
+    let errorMess = sameIDRule(account, staffs, "account")
+    if (!errorMess) {
+        sendErrorMess("You should not change account value")
+        return
+    }
+
     // Tạo nhân viên mới
     let newStaff = new Staff(account, name, email, pass, workDay, basicSalary, position, hoursPerMonth)
     // lấy index nhân viên đang sửa
