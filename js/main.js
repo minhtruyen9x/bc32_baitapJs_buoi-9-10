@@ -18,7 +18,7 @@ function Staff(account, name, email, pass, workDay, basicSalary, position, hours
     this.basicSalary = basicSalary;
     this.position = position;
     this.hoursPerMonth = hoursPerMonth;
-    this.totalSalary = this.calcSalary();
+    this.totalSalary = this.calcSalary().toFixed(0);
     this.typeOfStaff = this.calcTypeStaff();
 }
 
@@ -365,7 +365,7 @@ function validateType() {
     let position = dom("#chucvu").value
     let spanEl = dom("#tbChucVu")
 
-    let errorMess = typeRule(position)
+    let errorMess = typeRule(position, "Vị trí không hợp lệ")
     if (errorMess) {
         spanEl.style.display = "block"
         spanEl.innerText = errorMess

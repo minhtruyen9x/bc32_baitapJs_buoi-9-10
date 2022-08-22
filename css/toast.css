@@ -6,15 +6,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Indie Flower', cursive;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
 #toast {
+    font-family: 'Indie Flower', cursive;
     position: fixed;
     top: 32px;
     right: 32px;
